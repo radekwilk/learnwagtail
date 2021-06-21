@@ -1,0 +1,23 @@
+HOW TO START WAGTAIL PROJECT
+
+1. Ensure we have Python installed. To do so we can run command
+
+     python -V
+
+2. Next, we have to create virtual environment. One of the methods of use of pipenv. We can run this commands:
+
+    pipenv install
+    pipenv shell
+
+3. Now we can install Wagtail, run this command:
+
+    pip install wagtail
+
+4. Once completed, we can check if Wagtail is installed, by running this command:
+
+    pip show wagtail
+
+5. We can also check all the packages installed in my virtual environment by running this command:
+
+    pip freeze
+
