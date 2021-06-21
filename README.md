@@ -1,1 +1,1 @@
-#Learn Wagtail Project
+# Learn Wagtail Project
