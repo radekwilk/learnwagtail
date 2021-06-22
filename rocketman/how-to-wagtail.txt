@@ -21,3 +21,15 @@ HOW TO START WAGTAIL PROJECT
 
     pip freeze
 
+6. Now we can start new wagtail project. Let's name it rocketman. We can run this command:
+
+    wagtail start rocketman    (if we already have rocketman folder, we can runs this command: wagtail start rocketman .  This do at the end will ensure project is created in existing rocketman folder)
+
+7. And them we can install all requirements by running this command:
+
+     pip install -r requirements.txt
+
+8. And now we can run server by running this command:
+
+    py manage.py runserver 0.0.0.0:8000
+
