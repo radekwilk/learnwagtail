@@ -33,3 +33,25 @@ HOW TO START WAGTAIL PROJECT
 
     py manage.py runserver 0.0.0.0:8000
 
+9. Now we should see that many files are needs to be migrated. Run this command:
+
+    py manage.py migrate
+
+10. If we want to get out of pipenv we need to click Ctrl + D
+
+11. Now we will need to create super user to be able to access admin panel
+
+    py manage.py createsuperuser
+
+    Username:
+    Email:
+    Password:
+    Password (again):
+
+12. Once we make any changes to our models.py file, we need to makemigrations:
+
+    py manage.py makemigrations
+
+    and then migrate
+
+    py manage.py migrate
