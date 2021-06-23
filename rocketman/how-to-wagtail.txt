@@ -63,3 +63,21 @@ HOW TO CREATE NEW APP WITHIN EXISTING PROJECT
 1. Type this command to start new app (new page). Lets call it services:
 
     py manage.py startapp services
+
+2. Then do not forget to add services app into our base.py file.
+
+3. Then we can create new classes/pages in services models.py file
+
+4. Once Pages are created, we need to make migrations and migrate:
+
+    py manage.py makemigrations
+
+    and then migrate
+
+    py manage.py migrate
+
+5. Once pages are created and migrations are completed, we can add new created pages as childs to our home page. 
+   We can do that in out admin panel, by clicking ADD CHILD PAGE on our HOME PAGE.
+
+6. When all is set up and ready, we will have to create service_page.html template. In our project, the best place it will be in 
+   rocketman/templates folder. In there we create services subfolder and then service_page.html
