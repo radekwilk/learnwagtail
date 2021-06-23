@@ -55,3 +55,11 @@ HOW TO START WAGTAIL PROJECT
     and then migrate
 
     py manage.py migrate
+
+
+
+HOW TO CREATE NEW APP WITHIN EXISTING PROJECT
+
+1. Type this command to start new app (new page). Lets call it services:
+
+    py manage.py startapp services
