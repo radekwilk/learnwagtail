@@ -81,3 +81,36 @@ HOW TO CREATE NEW APP WITHIN EXISTING PROJECT
 
 6. When all is set up and ready, we will have to create service_page.html template. In our project, the best place it will be in 
    rocketman/templates folder. In there we create services subfolder and then service_page.html
+
+
+INSTALLING DEBUGGING TOOLS:
+
+1. django debug toolbar
+   - in our terminal, type:
+      pip install django-debug-toolbar
+
+    - then open file requirements.txt and save it as dev.txt
+    - delete it content, and type(version is our installed version of debug tool):
+      
+        -r requirements.txt
+        django-debug-toolbar==3.2.1
+    
+    - and then, we need to add this to the dev.py file:
+
+       INSTALLED_APPS += [
+            'debug_toolbar',
+        ]
+
+        MIDDLEWARE += [
+            'debug_toolbar.middleware.DebugToolbarMiddleware',
+        ]
+
+        INTERNAL_IPS = [
+            '127.0.0.1'
+        ]
+
+    - and then, in urls.py file, we have to add this line of code in urlpatterns:
+
+        path('__debug__/', include(debug_toolbar.urls))
+
+2. PUDB => Python interactive debugger
