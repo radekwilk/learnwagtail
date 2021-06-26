@@ -109,8 +109,22 @@ INSTALLING DEBUGGING TOOLS:
             '127.0.0.1'
         ]
 
-    - and then, in urls.py file, we have to add this line of code in urlpatterns:
+    - and then, in urls.py file, we have to add this line of code before wagtail urlpatterns:
 
-        path('__debug__/', include(debug_toolbar.urls))
+        urlpatterns = [
+             path('__debug__/', include(debug_toolbar.urls))
+         ] + urlpatterns    
 
 2. PUDB => Python interactive debugger
+
+     - first, run this command in our teminal:
+        
+         pip install pudb
+
+    - and then, in dev.txt file add (2021.1 is a version of pudb):
+
+        pudb==2021.1  
+
+    And when we want to use it, we can add this in our code we have trouble with:
+
+        import pudb; pu.db() 
