@@ -128,3 +128,13 @@ INSTALLING DEBUGGING TOOLS:
     And when we want to use it, we can add this in our code we have trouble with:
 
         import pudb; pu.db() 
+
+
+CREATING STREAM FIELDS
+
+1. We can create new app, called streams for example.
+
+2. Activate it in our base.py file by adding it to the INSTALLED_APP list
+
+3. In streams folder, we can change models.py file name to blocks.py 
+
