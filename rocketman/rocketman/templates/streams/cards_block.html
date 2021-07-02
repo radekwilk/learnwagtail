@@ -15,20 +15,20 @@
                 </picture>
             </a>
             <div class="card-body py-3 px-3">
-                <a href="{% if card.link.internal_page %}{{ card.link.internal_page.url }}{% elif card.link.external_link %}
-    {{ card.link.external_link }}{% else %}#{% endif %}">
+                {% if card.link.url  %}<a href="{{ card.link.url }}">{% endif %}
                     <h5 class="card-title">{{ card.title }}</h5>
                     {% if card.title %}
                         <p class="card-text">{{ card.text }}</p>
                     {% endif %}
-                </a>
+                {% if card.link.url %} </a> {% endif %}
 
+                {% if card.link.url %}
                 <p class="card-text">
-                    <a href="{% if card.link.internal_page %}{{ card.link.internal_page.url }}{% elif card.link.external_link %}
-    {{ card.link.external_link }}{% else %}#{% endif %}" class="btn btn-link d-inline">
+                    <a href="{{ card.link.url }}" class="btn btn-link d-inline">
                         {{ card.link.link_text }}
                     </a>
                 </p>
+                {% endif %}
             </div>
         </div>
     </div>
