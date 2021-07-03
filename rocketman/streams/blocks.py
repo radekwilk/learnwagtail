@@ -1,6 +1,7 @@
 from django import forms
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail.contrib.table_block.blocks import TableBlock
 
 class TitleBlock(blocks.StructBlock):
     text = blocks.CharBlock(
@@ -122,8 +123,14 @@ class CallToActionBlock(blocks.StructBlock):
         label = "Call to Action"
 
 
+class PricingTableBlock(TableBlock):
+    """Pricing Table block."""
 
-
+    class Meta:
+        template = 'streams/pricing_table_block.html'
+        label = 'Pricing Table'
+        icon = "table"
+        help_text = "Your procing tables should always have 4 columns"
 
 
 
