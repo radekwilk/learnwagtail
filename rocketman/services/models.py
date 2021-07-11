@@ -7,7 +7,11 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class ServiceListingPage(Page):
-
+    #one of the methods it is to set parent_page_types
+    parent_page_types = ["home.HomePage"]
+    subpage_types = ["services.ServicePage"]
+    max_count = 1
+    
     template = "services/service_listing_page.html"
     
     subtitle = models.TextField(
@@ -28,7 +32,9 @@ class ServiceListingPage(Page):
 
 
 class ServicePage(Page):
-
+    parent_page_types = ["services.ServiceListingPage"]
+    #if we do not want any subpage_types we can pass empty list
+    subpage_types = []
     template = "services/service_page.html"
     
     description = models.TextField(
