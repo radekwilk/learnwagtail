@@ -138,3 +138,8 @@ CREATING STREAM FIELDS
 
 3. In streams folder, we can change models.py file name to blocks.py 
 
+
+WAGTAILMENUS - EXTERNAL PACKAGE TO HELP SET UP MENU SYSTEM IN WAGTAIL
+
+1. https://github.com/rkhleics/wagtailmenus
+2. https://wagtailmenus.readthedocs.io/en/stable/
