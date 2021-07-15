@@ -143,3 +143,7 @@ WAGTAILMENUS - EXTERNAL PACKAGE TO HELP SET UP MENU SYSTEM IN WAGTAIL
 
 1. https://github.com/rkhleics/wagtailmenus
 2. https://wagtailmenus.readthedocs.io/en/stable/
+
+To SPICE UP FORMS, WE CAN INSTALL DJANGO-WIDGET-TWEAKS
+pip install django-widget-tweaks
+
