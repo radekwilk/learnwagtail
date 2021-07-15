@@ -147,3 +147,14 @@ WAGTAILMENUS - EXTERNAL PACKAGE TO HELP SET UP MENU SYSTEM IN WAGTAIL
 To SPICE UP FORMS, WE CAN INSTALL DJANGO-WIDGET-TWEAKS
 pip install django-widget-tweaks
 
+Once installed, we need to add it to requirements.txt file:
+
+django-widget-tweaks==1.4.8
+
+If we not sure what version we using, type pip show django-widget-tweaks
+
+We also need to add this to installed apps in base.py. We need to add
+
+'widget_tweaks'
+
+And the we need to load it into out contact page
