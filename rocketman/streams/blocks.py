@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from wagtail.core.blocks.struct_block import StructBlockValidationError
 from django.forms.utils import ErrorList
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
@@ -52,9 +53,8 @@ class Link(blocks.StructBlock):
             errors["internal_page"] = ErrorList(["Please select a page or enter a URL for one of these options."])
             errors["external_link"] = ErrorList(["Please select a page or enter a URL for one of these options."])
 
-
         if errors:
-            raise ValidationError("Validation error in your Link", params=errors)
+            raise StructBlockValidationError(errors)
 
         return super().clean(value)
 

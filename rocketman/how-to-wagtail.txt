@@ -158,3 +158,5 @@ We also need to add this to installed apps in base.py. We need to add
 'widget_tweaks'
 
 And the we need to load it into out contact page
+
+to learn more about Wagtail, we can go to wagtail.io/slack
