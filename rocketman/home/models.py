@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.core.cache import cache
+from django.core.cache.utils import make_template_fragment_key
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, StreamFieldPanel
@@ -96,3 +97,12 @@ class HomePage(Page):
         ImageChooserPanel("banner_background_image"),
         StreamFieldPanel("body")
     ]
+
+    def save(self, *args, **kwargs):
+
+        key = make_template_fragment_key(
+            "home_page_streams",
+            [self.id],
+        )
+        cache.delete(key)
+        return super().save(*args, **kwargs)
